@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to One Login</title>
+<script src="resources/script/angular.min.js"></script>
+<script src="resources/script/viewcontroller.js"></script>
+<link rel="stylesheet" href="resources/css/application.css">
+</head>
+<body>
+	<div data-ng-app="OneLoginMain" data-ng-controller="OneLoginController" id="mainContiner">
+		<div id="header">Header</div>
+		<div id="content">
+			<div id="floatLeft">Float Left</div>
+			<div id="floatCenter">
+				<div data-ng-view="">Float Center</div>
+			</div>
+			<div id="floatRight">Float Right</div>
+		</div>
+		<br>
+		<div id="footer">Footer</div>
+	</div>
+</body>
+</html>
