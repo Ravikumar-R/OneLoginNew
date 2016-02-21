@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-Login Page
-</body>
-</html>
+<div data-ng-init="myButton=true">
+	<label>User Name</label> <input type="text" name="username"
+		data-ng-model="username" required> <br> <label>Password</label>
+	<input type="password" name="userpassword" data-ng-model="userpassword"
+		required>
+	<button class="button" data-ng-click="SendHttpPostData()">Get me in.</button>
+</div>

@@ -6,19 +6,23 @@
 <script src="resources/script/angular.min.js"></script>
 <script src="resources/script/viewcontroller.js"></script>
 <link rel="stylesheet" href="resources/css/application.css">
+ <script src="resources/script/angular-route.min.js"></script>
 </head>
 <body>
-	<div data-ng-app="OneLoginMain" data-ng-controller="OneLoginController" id="mainContiner">
-		<div id="header">Header</div>
+	<div data-ng-app="OneLoginMain" data-ng-controller="OneLoginController"
+		id="mainContiner">
+		<div id="header">Header
+		<a href="#login">Sign in</a>
+		</div>
 		<div id="content">
-			<div id="floatLeft">Float Left</div>
+			<div id="floatLeft"></div>
 			<div id="floatCenter">
-				<div data-ng-view="">Float Center</div>
+				<div data-ng-view=""></div>
 			</div>
-			<div id="floatRight">Float Right</div>
+			<div id="floatRight"></div>
 		</div>
 		<br>
-		<div id="footer">Footer</div>
+		<div id="footer">Footer {{10+10}}</div>
 	</div>
 </body>
 </html>
