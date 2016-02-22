@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tcs.klm.configurations;
+package com.ravi.angularmvc.configurations;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
