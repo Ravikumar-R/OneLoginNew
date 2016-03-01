@@ -19,19 +19,20 @@ mainApp.controller('OneLoginController', function($scope, $http, $window) {
 		});
 	}
 	$scope.getApplicationDetails = function(name) {
+		$scope.environmentDetails = "";
 		$http({
 			method : "POST",
 			url : "\applicationdetails",
 			data : {
-				application : [name]
+				application : name
 			},
 			mimeType : 'application/json',
 			headers : {
 				'Content-Type' : 'application/json'
 			}
 		}).then(function mySucces(response) {
-			$scope.applications = response.data;
-			$window.location.hash = '#/applicationDetails';
+			$scope.environmentDetails = response.data;
+			$window.location.hash = '#/applicationEnvironmentDetails';
 		});
 	}
 });
@@ -39,6 +40,8 @@ mainApp.controller('OneLoginController', function($scope, $http, $window) {
 mainApp.config(function($routeProvider) {
 	$routeProvider.when('/login', {
 		templateUrl : 'static/includes/login.html'
+	}).when('/applicationEnvironmentDetails', {
+		templateUrl : 'static/includes/environmentsdetails.html',
 	}).when('/applicationDetails', {
 		templateUrl : 'static/includes/applicationdetails.html',
 	});

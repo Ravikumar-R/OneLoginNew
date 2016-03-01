@@ -1,0 +1,15 @@
+<div id="displayHeader">{{environmentDetails.application}}</div>
+<br>
+<div id="displayTab"
+	data-ng-repeat="environment in environmentDetails.environmentList">
+	<div>
+		<span>{{environment.ename}}</span><span><a data-ng-click="OpenNewTab(environment.url)" target="new"> {{environment.url}} </a></span>
+	</div>
+	<div id="displayTable"
+		data-ng-repeat="credentials in environment.loginInformationList">
+		<div>Role : {{credentials.role}}</div>
+		<span>User Name: {{credentials.userName}}</span> <span>Password
+			: {{credentials.password}}</span>
+	</div>
+	<br>
+</div>
